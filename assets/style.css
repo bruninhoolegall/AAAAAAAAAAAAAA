@@ -1,0 +1,48 @@
+body{
+    background: url(download.jpg);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+footer p{
+    text-align: center;
+    margin: auto;
+}
+
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.card{
+    margin: 1rem 1rem;
+    background-color: orange;
+    flex-grow: 1;
+    flex-basis: calc(33%-6em);
+}
+
+.card_cont{
+    text-align: center;
+    background-color: orangered;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+
+}
+
+.card.active .card_cont{
+    transform: rotateY(180deg);
+}
+
+.card_cont_quest, .card_cont_resposta, .card h3{
+    backface-visibility: hidden;
+}
+
+.card_cont_resposta{
+    transform: rotateY(180deg);
+}
